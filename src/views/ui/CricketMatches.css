@@ -1,0 +1,73 @@
+.cricket-matches {
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #343a40; /* Updated background color */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Other CSS remains the same */
+  .cricket-matches h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .tabs button:hover {
+    background-color: #333;
+    border-radius: 4px;
+  }
+  
+  .matches-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .matches-table th, .matches-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+  
+  .matches-table th {
+    font-weight: bold;
+    color: #aaa;
+  }
+  
+  .matches-table .live-tag {
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  
+  .matches-table .team {
+    display: inline-block;
+    width: 60px;
+  }
+  
+  .matches-table .score {
+    font-weight: bold;
+    margin: 0 8px;
+  }
+  

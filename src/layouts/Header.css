@@ -1,0 +1,79 @@
+/* Header.css */
+
+.custom-navbar {
+    background-color: #000; /* Set navbar background to black */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.company-name {
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-date {
+    color: lightgray;
+}
+
+.search-bar {
+    flex: 1; /* Makes the search bar take up available space */
+    max-width: 400px;
+    margin-left: 20%;
+}
+
+.search-input {
+    background-color: #333; /* Gray background */
+    color: white; /* Text color */
+    border: none;
+}
+
+.search-input::placeholder {
+    color: lightgray; /* Light gray placeholder */
+}
+
+.search-icon {
+    background-color: #333; /* Matches the search input color */
+    border: none;
+    color: lightgray; /* Light gray placeholder */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.signup-button {
+    background-color: purple;
+    border: none;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.login-button {
+    border: 1px solid purple;
+    color: purple;
+    background-color: transparent; /* Initial background transparent */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Change background color on hover */
+.signup-button:hover {
+    background-color: transparent;
+    border: 2px solid purple;
+}
+
+.login-button:hover {
+    background-color: transparent; /* Set background color to black on hover */
+    color: white; /* Change text color to white for better contrast */
+    border: 2px solid purple;
+
+}
+
+.profile-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%; /* Optional: makes it circular */
+}
