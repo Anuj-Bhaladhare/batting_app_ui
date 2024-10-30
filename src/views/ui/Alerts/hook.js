@@ -11,7 +11,7 @@ const useAlert = () => {
   const getAlerts = async () => {
     console.log("Calling API in getAlerts");
     // ================== State Management =================
-    dispatch(_setObject({ alertData: "Bhaladhare"}));
+    dispatch(_setObject({ alertData: "this is the testing of state management"}));
     // =====================================================
     try {
       const response = await relayService({
