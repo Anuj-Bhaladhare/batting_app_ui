@@ -4,23 +4,21 @@ import useAlert from "./hook";
 import { useStateValue } from '../../../context';
 
 const Alerts = () => {
-  const [{ getAlerts, data }] = useAlert();
+  const [{ getAlerts }] = useAlert();
   const [matches, setMatches] = useState([]);
 
-  // ===============================================
   const [{ app }, dispatch] = useStateValue();
-  const { alertData } = app || {}
-  // ===============================================
+  const { alert_responce } = app || {}
 
   useEffect(() => {
-    getAlerts()
-      .then(() => setMatches(data))
-      .catch((err) => console.log("Data fetch error:", err));
-  }, [data]);
+    getAlerts().then((res) => {
+      // console.log("AAAAAAAAA", res)
+      setMatches(res.markets)
+    }).catch((err) => {
+      console.log("Data fetch error:", err)
+    });
+  }, []);
 
-  useEffect(() => {
-      console.log("hello anuj AAAAAAAAAAA", alertData);
-  }, [alertData])
 
   return (
     <div className="cricket-matches">

@@ -6,9 +6,9 @@ import { useStateValue } from "./../../../context";
 const useAlert = () => {
 
   const [{ app }, dispatch] = useStateValue();
-  const [data, setData] = useState([]);
   
   const getAlerts = async () => {
+
     console.log("Calling API in getAlerts");
     
     try {
@@ -16,20 +16,20 @@ const useAlert = () => {
         method: 'GET',
         url: '/api/home',
         headers: {
-          'x-rapidapi-key': 'd92cdd3febmshb47317cd5b99814p1debcfjsnc4787bb32207',
-          'x-rapidapi-host': 'betfair14.p.rapidapi.com'
+          "X-ScoreSwift-Key": "lnA8maxBlgC6Ld0v8CQ5_v17"
         }
       });
-      console.log("API response:", response?.data[0].markets);
-      setData(response?.data[0].markets || []);
-      dispatch(_setObject({ alertData: "this is the testing of state management"}));
+
+      return response?.data[0];
+
+      // dispatch(_setObject({ alert_responce: response?.data}));
 
     } catch (error) {
       console.log("API error:", error);
     }
   };
 
-  return [{ getAlerts, data }];
+  return [{ getAlerts }];
 };
 
 export default useAlert;
