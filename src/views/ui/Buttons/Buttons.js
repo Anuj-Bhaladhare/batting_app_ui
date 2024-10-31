@@ -1,19 +1,30 @@
-import React from 'react';
-import './CricketMatches.css';
+import React, { useEffect, useState } from 'react';
+import './../CricketMatches.css';
+import useAlert from "./hook";
+import { useStateValue } from '../../../context';
 
-const Grids = () => {
-  const matches = [
-    { time: '9:00', status: 'Live', team1: 'India', score: '2:0', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
-    { time: '9:30', status: 'Live', team1: 'India', score: '2:0', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
-    { time: '9:45', status: 'Today', team1: 'India', score: '-:-', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
-    { time: '11:45', status: 'Today', team1: 'India', score: '-:-', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
-    { time: '12:00', status: 'Today', team1: 'India', score: '-:-', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
-    { time: '12:15', status: 'Tomorrow', team1: 'India', score: '-:-', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
-  ];
+const Alerts = () => {
+  const [{ getAlerts, data }] = useAlert();
+  const [matches, setMatches] = useState([]);
+
+  // ===============================================
+  const [{ app }, dispatch] = useStateValue();
+  const { alertData } = app || {}
+  // ===============================================
+
+  useEffect(() => {
+    getAlerts()
+      .then(() => setMatches(data))
+      .catch((err) => console.log("Data fetch error:", err));
+  }, [data]);
+
+  useEffect(() => {
+      console.log("hello anuj AAAAAAAAAAA", alertData);
+  }, [alertData])
 
   return (
     <div className="cricket-matches">
-      <h2>Grayhound Racing Matches</h2>
+      <h2>Cricket Matches</h2>
       <div className="tabs">
         <button>All Games</button>
         <button>Live Matches</button>
@@ -50,5 +61,4 @@ const Grids = () => {
   );
 };
 
-
-export default Grids;
+export default Alerts;
