@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = "https://betfair14.p.rapidapi.com";
+const BASE_URL = "https://betting.scoreswift.xyz";
 
 const relayService = ({ url, method = 'GET', headers, data }) => {
     const axios_instance = axios({ url, method, baseURL: BASE_URL, headers, data })

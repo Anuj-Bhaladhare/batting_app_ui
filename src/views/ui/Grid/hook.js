@@ -1,7 +1,7 @@
 import { useState } from "react";
 import relayService from "../../../axios/hook";
 import { _setObject } from "../../../app/action";
-import { useStateValue } from "./../../../context";
+import { useStateValue } from "../../../context";
 
 const useAlert = () => {
 

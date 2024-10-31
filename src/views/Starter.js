@@ -1,85 +1,54 @@
-import { Col, Row } from "reactstrap";
-import SalesChart from "../components/dashboard/SalesChart";
-import Feeds from "../components/dashboard/Feeds";
-import ProjectTables from "../components/dashboard/ProjectTable";
+import React from 'react';
+import '../views/ui/CricketMatches.css';
 
-import Blog from "../components/dashboard/Blog";
-import bg1 from "../assets/images/bg/bg1.jpg";
-import bg2 from "../assets/images/bg/bg2.jpg";
-import bg3 from "../assets/images/bg/bg3.jpg";
-import bg4 from "../assets/images/bg/bg4.jpg";
+const Alerts = () => {
+  const matches = [
+    { time: '9:00', status: 'Live', team1: 'India', score: '2:0', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
+    { time: '9:30', status: 'Live', team1: 'India', score: '2:0', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
+    { time: '9:45', status: 'Today', team1: 'India', score: '-:-', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
+    { time: '11:45', status: 'Today', team1: 'India', score: '-:-', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
+    { time: '12:00', status: 'Today', team1: 'India', score: '-:-', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
+    { time: '12:15', status: 'Tomorrow', team1: 'India', score: '-:-', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
+  ];
 
-const BlogData = [
-  {
-    image: bg1,
-    title: "This is simple blog",
-    subtitle: "2 comments, 1 Like",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    btnbg: "primary",
-  },
-  {
-    image: bg2,
-    title: "Lets be simple blog",
-    subtitle: "2 comments, 1 Like",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    btnbg: "primary",
-  },
-  {
-    image: bg3,
-    title: "Don't Lamp blog",
-    subtitle: "2 comments, 1 Like",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    btnbg: "primary",
-  },
-  {
-    image: bg4,
-    title: "Simple is beautiful",
-    subtitle: "2 comments, 1 Like",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    btnbg: "primary",
-  },
-];
-
-const Starter = () => {
   return (
-    <div>
-      {/***Top Cards***/}
-
-      {/***Sales & Feed***/}
-      <Row>
-        <Col lg="6" xl="7" xxl="8">
-          <SalesChart />
-        </Col>
-        <Col lg="6" xl="5" xxl="4">
-          <Feeds />
-        </Col>
-      </Row>
-      {/***Table ***/}
-      <Row>
-        <Col lg="12">
-          <ProjectTables />
-        </Col>
-      </Row>
-      {/***Blog Cards***/}
-      <Row>
-        {BlogData.map((blg, index) => (
-          <Col sm="6" lg="6" xl="3" key={index}>
-            <Blog
-              image={blg.image}
-              title={blg.title}
-              subtitle={blg.subtitle}
-              text={blg.description}
-              color={blg.btnbg}
-            />
-          </Col>
-        ))}
-      </Row>
+    <div className="cricket-matches">
+      <h2>Cricket Matches</h2>
+      <div className="tabs">
+        <button>All Games</button>
+        <button>Live Matches</button>
+        <button>Upcoming Events</button>
+        <button>Finished</button>
+      </div>
+      <table className="matches-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Match</th>
+            <th>1X</th>
+            <th>X</th>
+            <th>X2</th>
+          </tr>
+        </thead>
+        <tbody>
+          {matches.map((match, index) => (
+            <tr key={index}>
+              <td>{match.time} {match.status === 'Live' && <span className="live-tag">{match.status}</span>}</td>
+              <td>
+                <span className="team">{match.team1}</span>
+                <span className="score">{match.score}</span>
+                <span className="team">{match.team2}</span>
+              </td>
+              <td>{match.odds['1X']}</td>
+              <td>{match.odds.X}</td>
+              <td>{match.odds['X2']}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
-export default Starter;
+
+export default Alerts;
