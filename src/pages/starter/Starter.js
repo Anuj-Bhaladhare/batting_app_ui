@@ -4,7 +4,7 @@ import useStarterHook from './hook';
 
 const Alerts = () => {
 
-  const [{ getHomePageDetail, getInplayDetails }] = useStarterHook();
+  const [{ getHomePageDetail, getInplayDetails, getMarketDetailsByMarketID }] = useStarterHook();
 
   const matches = [
     { time: '9:00', status: 'Live', team1: 'India', score: '2:0', team2: 'Pakistan', odds: { '1X': '2.02', X: '300', 'X2': '1.98' } },
@@ -27,7 +27,10 @@ const Alerts = () => {
     // get details of home api
     useEffect( () => {
       getHomePageDetail().then( (res) => {
-         console.log("this is the home api responce", res);
+         if(res){
+          let market_id = res?.markets[0]?.marketId
+          getMarketDetailsByMarketID(market_id);
+         }
       }).catch( (err) => {
           console.log("this is the home api error", err);
       })
