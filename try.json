@@ -1,0 +1,178 @@
+
+// this is the series data
+[
+    {
+      "id": "101480",
+      "name": "Indian Premier League",
+      "childNode": "getevents/101480",
+      "detail": "competitionsmarkets/101480"
+    },
+    {
+      "id": "10529093",
+      "name": "WBBL",
+      "childNode": "getevents/10529093",
+      "detail": "competitionsmarkets/10529093"
+    },
+    {
+      "id": "9962116",
+      "name": "One Day Internationals",
+      "childNode": "getevents/9962116",
+      "detail": "competitionsmarkets/9962116"
+    },
+    {
+      "id": "11365612",
+      "name": "Test Matches",
+      "childNode": "getevents/11365612",
+      "detail": "competitionsmarkets/11365612"
+    },
+    {
+      "id": "11271794",
+      "name": "ICC Champions Trophy",
+      "childNode": "getevents/11271794",
+      "detail": "competitionsmarkets/11271794"
+    },
+    {
+      "id": "12649673",
+      "name": "ICC Cricket World Cup League 2",
+      "childNode": "getevents/12649673",
+      "detail": "competitionsmarkets/12649673"
+    },
+    {
+      "id": "11569227",
+      "name": "Sheffield Shield",
+      "childNode": "getevents/11569227",
+      "detail": "competitionsmarkets/11569227"
+    },
+    {
+      "id": "11586749",
+      "name": "Test Series Markets",
+      "childNode": "getevents/11586749",
+      "detail": "competitionsmarkets/11586749"
+    },
+    {
+      "id": "12678911",
+      "name": "The Ashes 2025/26",
+      "childNode": "getevents/12678911",
+      "detail": "competitionsmarkets/12678911"
+    },
+    {
+      "id": "12694524",
+      "name": "WBBL",
+      "childNode": "getevents/12694524",
+      "detail": "competitionsmarkets/12694524"
+    }
+  ]
+
+
+===================================================================
+// this is the soprt data
+  [
+    {
+      "id": "4",
+      "name": "Cricket",
+      "childNode": "getcompetition/4",
+      "detail": "sportsbyid/4"
+    },
+    {
+      "id": "1",
+      "name": "Soccer",
+      "childNode": "getcompetition/1",
+      "detail": "sportsbyid/1"
+    },
+    {
+      "id": "2",
+      "name": "Tennis",
+      "childNode": "getcompetition/2",
+      "detail": "sportsbyid/2"
+    },
+    {
+      "id": "6423",
+      "name": "American Football",
+      "childNode": "getcompetition/6423",
+      "detail": "sportsbyid/6423"
+    },
+    {
+      "id": "7522",
+      "name": "Basketball",
+      "childNode": "getcompetition/7522",
+      "detail": "sportsbyid/7522"
+    },
+    {
+      "id": "6",
+      "name": "Boxing",
+      "childNode": "getcompetition/6",
+      "detail": "sportsbyid/6"
+    },
+    {
+      "id": "3503",
+      "name": "Darts",
+      "childNode": "getcompetition/3503",
+      "detail": "sportsbyid/3503"
+    },
+    {
+      "id": "3",
+      "name": "Golf",
+      "childNode": "getcompetition/3",
+      "detail": "sportsbyid/3"
+    },
+    {
+      "id": "4339",
+      "name": "Greyhound Racing",
+      "childNode": "getcountries/4339",
+      "detail": "raceschedule/4339/ALL"
+    },
+    {
+      "id": "15",
+      "name": "Greyhound Todays Card",
+      "childNode": "todayraces/4339",
+      "detail": "raceschedule/4339/today"
+    },
+    {
+      "id": "13",
+      "name": "Horse Race Todays Card",
+      "childNode": "todayraces/7",
+      "detail": "raceschedule/7/today"
+    },
+    {
+      "id": "7",
+      "name": "Horse Racing",
+      "childNode": "getcountries/7",
+      "detail": "raceschedule/7/ALL"
+    },
+    {
+      "id": "26420387",
+      "name": "Mixed Martial Arts",
+      "childNode": "getcompetition/26420387",
+      "detail": "sportsbyid/26420387"
+    },
+    {
+      "id": "8",
+      "name": "Motor Sport",
+      "childNode": "getcompetition/8",
+      "detail": "sportsbyid/8"
+    },
+    {
+      "id": "2378961",
+      "name": "Politics",
+      "childNode": "getcompetition/2378961",
+      "detail": "marketdetail/1.176878927"
+    },
+    {
+      "id": "1477",
+      "name": "Rugby League",
+      "childNode": "getcompetition/1477",
+      "detail": "sportsbyid/1477"
+    },
+    {
+      "id": "5",
+      "name": "Rugby Union",
+      "childNode": "getcompetition/5",
+      "detail": "sportsbyid/5"
+    },
+    {
+      "id": "6422",
+      "name": "Snooker",
+      "childNode": "getcompetition/6422",
+      "detail": "sportsbyid/6422"
+    }
+  ]

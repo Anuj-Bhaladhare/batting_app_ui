@@ -6,16 +6,28 @@ const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 
 /***** Pages ****/
 
-const Starter = lazy(() => import("../views/Starter.js"));
-const About = lazy(() => import("../views/About.js"));
-const Alerts = lazy(() => import("../views/ui/Alerts/alerts.js"));
-const Badges = lazy(() => import("../views/ui/Badges/Badges.js"));
-const Buttons = lazy(() => import("../views/ui/Buttons/Buttons.js"));
-const Cards = lazy(() => import("../views/ui/Cards/Cards.js"));
-const Grid = lazy(() => import("../views/ui/Grid/Grid.js"));
-const Tables = lazy(() => import("../views/ui/Tables"));
-const Forms = lazy(() => import("../views/ui/Forms"));
-const Breadcrumbs = lazy(() => import("../views/ui/Breadcrumbs"));
+// const Starter = lazy(() => import("../views/Starter.js"));
+// const About = lazy(() => import("../views/About.js"));
+// const Alerts = lazy(() => import("../views/ui/Alerts/alerts.js"));
+// const Badges = lazy(() => import("../views/ui/Badges/Badges.js"));
+// const Buttons = lazy(() => import("../views/ui/Buttons/Buttons.js"));
+// const Cards = lazy(() => import("../views/ui/Cards/Cards.js"));
+// const Grid = lazy(() => import("../views/ui/Grid/Grid.js"));
+// const Tables = lazy(() => import("../views/ui/Tables"));
+// const Forms = lazy(() => import("../views/ui/Forms"));
+// const Breadcrumbs = lazy(() => import("../views/ui/Breadcrumbs"));
+
+
+const Starter = lazy(() => import("../pages/starter/Starter.js"));
+const About = lazy(() => import("../pages/about/About.js"));
+const Alerts = lazy(() => import("../pages/Alerts/alerts.js"));
+const Badges = lazy(() => import("../pages/Badges/Badges.js"));
+const Buttons = lazy(() => import("../pages/Buttons/Buttons.js"));
+const Cards = lazy(() => import("../pages/Cards/Cards.js"));
+const Grid = lazy(() => import("../pages/Grid/Grid.js"));
+const Tables = lazy(() => import("../components/Tables.js"));
+const Forms = lazy(() => import("../components/Forms.js"));
+const Breadcrumbs = lazy(() => import("../components/Breadcrumbs.js"));
 
 /*****Routes******/
 
