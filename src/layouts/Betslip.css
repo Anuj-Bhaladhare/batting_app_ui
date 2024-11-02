@@ -1,0 +1,33 @@
+.betslip-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    width: 250px;
+    border-radius: 8px;
+  }
+  
+  .nav-tabs .nav-link {
+    color: #999;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #333;
+    border: none;
+  }
+  
+  .content {
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .edit-stakes-button {
+    background-color: #a100ff;
+    border: none;
+  }
+  
+  .edit-stakes-button:hover {
+    background-color: #8200d6;
+  }
+  

@@ -8,11 +8,11 @@ const Alerts = () => {
   const [matches, setMatches] = useState([]);
 
   const [{ app }, dispatch] = useStateValue();
-  const { alert_responce } = app || {}
+  const { alert_responce } = app || {}     
 
   useEffect(() => {
     getAlerts().then((res) => {
-      // console.log("AAAAAAAAA", res)
+      console.log("AAAAAAAAA", res)
       setMatches(res.markets)
     }).catch((err) => {
       console.log("Data fetch error:", err)
@@ -42,15 +42,15 @@ const Alerts = () => {
         <tbody>
           {matches.map((match, index) => (
             <tr key={index}>
-              <td>{match.time} {match.status === 'Live' && <span className="live-tag">{match.status}</span>}</td>
+              <td>{match.market} {match.status === 'OPEN' && <span className="live-tag">{match.status}</span>}</td>
               <td>
-                <span className="team">{match.team1}</span>
-                <span className="score">{match.score}</span>
-                <span className="team">{match.team2}</span>
+                <span className="team">{match.marketName}</span>
+                {/* <span className="score">{match.score}</span>
+                <span className="team">{match.team2}</span> */}
               </td>
-              <td>{match.odds['1X']}</td>
+              {/* <td>{match.odds['1X']}</td>
               <td>{match.odds.X}</td>
-              <td>{match.odds['X2']}</td>
+              <td>{match.odds['X2']}</td> */}
             </tr>
           ))}
         </tbody>

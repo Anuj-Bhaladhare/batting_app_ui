@@ -48,14 +48,12 @@ const getMarketDetailsByMarketID = async (market_id) => {
     try {
       const response = await relayService({
         method: 'GET',
-        // url: `/api/GetMarketDetails?market_id=${market_id}`,
         url: `/api/GetMarketOdds?market_id=${market_id}`,
         headers: {
           "X-ScoreSwift-Key": "lnA8maxBlgC6Ld0v8CQ5_v17"
         }
       });
-      // dispatch(_setObject({ alert_responce: response?.data}));
-      console.log("market responce", response);
+      // console.log("market responce", response?.data[0]);
       return response?.data[0];
 
     } catch (error) {

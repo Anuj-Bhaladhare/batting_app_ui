@@ -14,7 +14,29 @@ const useAlert = () => {
     try {
       const response = await relayService({
         method: 'GET',
-        url: '/api/home',
+        url: '/api/inplay',
+        headers: {
+          "X-ScoreSwift-Key": "lnA8maxBlgC6Ld0v8CQ5_v17"
+        }
+      });
+
+      return response?.data[0];
+
+      // dispatch(_setObject({ alert_responce: response?.data}));
+
+    } catch (error) {
+      console.log("API error:", error);
+    }
+  };
+
+  const getLaysandBuys = async () => {
+
+    console.log("Calling API in getLaysandBuys");
+    
+    try {
+      const response = await relayService({
+        method: 'GET',
+        url: '/api/inplay',
         headers: {
           "X-ScoreSwift-Key": "lnA8maxBlgC6Ld0v8CQ5_v17"
         }
@@ -33,3 +55,6 @@ const useAlert = () => {
 };
 
 export default useAlert;
+
+
+// export

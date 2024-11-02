@@ -1,0 +1,59 @@
+.form-container {
+    background-color: #2c003e;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+  }
+  
+  .form-container .nav-tabs .nav-link {
+    border: none;
+    font-weight: bold;
+  }
+  
+  .form-container .form-control {
+    background-color: #3e0759;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #7543a3;
+  }
+  
+  .form-container .btn-primary {
+    background: linear-gradient(to right, #a56fbf, #7543a3);
+    border: none;
+    font-weight: bold;
+  }
+  
+  /* App.css */
+  .form-container {
+    background-color: #2c003e;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+  }
+  
+  .form-container .nav-tabs .nav-link {
+    border: none;
+    font-weight: bold;
+  }
+  
+  .form-container .form-control {
+    background-color: #3e0759;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #7543a3;
+  }
+  
+  .form-container .btn-primary {
+    background: linear-gradient(to right, #a56fbf, #7543a3);
+    border: none;
+    font-weight: bold;
+  }
+  
+  .form-container .btn-secondary {
+    background-color: #7543a3;
+    border: none;
+    font-weight: bold;
+  }
+  
+  
+  

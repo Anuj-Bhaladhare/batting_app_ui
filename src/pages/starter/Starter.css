@@ -1,0 +1,26 @@
+.cricket-matches {
+    font-family: Arial, sans-serif;
+  }
+  
+  .matches-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .matches-table th, .matches-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .matches-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .live-tag {
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  

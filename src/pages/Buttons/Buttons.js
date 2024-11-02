@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../style_sheet/CricketMatches.css';
 import useAlert from "./hook";
-import { useStateValue } from '../../../context';
+// import { useStateValue } from '../../../context';
 
 const Alerts = () => {
   const [{ getAlerts, data }] = useAlert();

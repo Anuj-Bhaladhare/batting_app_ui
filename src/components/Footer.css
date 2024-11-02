@@ -1,0 +1,29 @@
+/* Footer.css */
+
+.footer {
+    font-size: 14px;
+  }
+  
+  .footer h5 {
+    font-weight: bold;
+  }
+  
+  .footer .footer-text {
+    font-size: 10px;
+  }
+  
+  .footer .social-icons a {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #1da1f2;
+  }
+  
+  .foot_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
