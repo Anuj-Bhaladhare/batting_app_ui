@@ -1,26 +1,48 @@
+
 import React, { useEffect, useState } from 'react';
 import '../../style_sheet/CricketMatches.css';
-import useAlert from "../Grid/hook";
-import { useStateValue } from '../../../context';
+import useGrid from './hook';
+import '../../style_sheet/starter.css'
 
 const Alerts = () => {
-  const [{ getAlerts, data }] = useAlert();
+  const [{ getHomePageDetail, getInplayDetails, getMarketDetailsByMarketID }] = useGrid();
   const [matches, setMatches] = useState([]);
 
-  // ===============================================
-  const [{ app }, dispatch] = useStateValue();
-  const { alertData } = app || {}
-  // ===============================================
-
+  
   useEffect(() => {
-    getAlerts()
-      .then(() => setMatches(data))
-      .catch((err) => console.log("Data fetch error:", err));
-  }, [data]);
+    getInplayDetails()
+      .then((res) => {
+        if (Array.isArray(res)) {
+          // console.log("modified_arr",res)
+          setMatches(res)
+        } else {
+          console.error("Expected an array for inplay details, received:", res);
+        }
+      })
+      .catch((err) => {
+        console.log("Error fetching inplay details:", err);
+      });
+  }, []);
 
-  useEffect(() => {
-      console.log("hello anuj AAAAAAAAAAA", alertData);
-  }, [alertData])
+  // get details of home api
+  useEffect( () => {
+    getHomePageDetail().then( (res) => {
+        if(res){
+        let market_id = res?.markets[0]?.marketId
+        getMarketDetailsByMarketID(market_id)
+        .then((res) =>{ 
+          // setMatches(res)
+          // console.log("res" , res)
+        })
+        .catch((err) => console.log("this is market id error anuj", err))
+        }
+    }).catch( (err) => {
+        console.log("this is the home api error", err);
+    })
+  }, []);
+
+
+ 
 
   return (
     <div className="cricket-matches">
@@ -34,7 +56,7 @@ const Alerts = () => {
       <table className="matches-table">
         <thead>
           <tr>
-            <th>Date</th>
+            <th>Time</th>
             <th>Match</th>
             <th>1X</th>
             <th>X</th>
@@ -42,19 +64,38 @@ const Alerts = () => {
           </tr>
         </thead>
         <tbody>
-          {matches.map((match, index) => (
-            <tr key={index}>
-              <td>{match.time} {match.status === 'Live' && <span className="live-tag">{match.status}</span>}</td>
-              <td>
-                <span className="team">{match.team1}</span>
-                <span className="score">{match.score}</span>
-                <span className="team">{match.team2}</span>
-              </td>
-              <td>{match.odds['1X']}</td>
-              <td>{match.odds.X}</td>
-              <td>{match.odds['X2']}</td>
+          {matches.length > 0 ? (
+            matches.map((match, index) => (
+              <tr key={index}>
+                <td>
+                  {new Date(match.marketStartTime).toLocaleTimeString()} {match.status === 'OPEN' && <span className="live-tag">LIVE</span>}
+                </td>
+                <td>
+                  <span className="team">{match.marketName }</span>
+                </td>
+                <td>
+                  {match.runners[0]?.ex?.availableToBack[0]?.price || '-'}
+                  <br/>
+                  {match.runners[0]?.ex?.availableToBack[0]?.size || '-'}
+                </td>
+                <td>
+                  {match.runners[1]?.ex?.availableToBack[0]?.price || '-'}
+                  <br/>
+                  {match.runners[1]?.ex?.availableToBack[0]?.size || '-'}
+                </td>
+                <td>
+                  {match.runners[2]?.ex?.availableToBack[0]?.price || '-'}
+                  <br/>
+                  {match.runners[2]?.ex?.availableToBack[0]?.size || '-'}
+                </td>
+
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="5">No matches available</td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
