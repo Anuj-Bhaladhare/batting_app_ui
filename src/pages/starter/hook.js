@@ -1,4 +1,3 @@
-import { useState } from "react";
 import relayService from "../../axios/hook";
 import { _setObject } from "../../app/action";
 import { useStateValue } from "../../context";
@@ -85,12 +84,13 @@ const useStarterHook = () => {
                 }
             }
 
-            console.log("games_data_array_1", games_data_array_1);
-            console.log("runners_data_array_2", runners_data_array_2);
+            // console.log("games_data_array_1", games_data_array_1);
+            // console.log("runners_data_array_2", runners_data_array_2);
 
             // Merge games_data_array_1 and runners_data_array_2 based on marketId
             const mergedArray = mergeArraysByMarketId(games_data_array_1, runners_data_array_2);
-            console.log("Merged Array:", mergedArray);
+            // console.log("Merged Array:", mergedArray);
+            return mergedArray;
         }
 
     } catch (error) {
