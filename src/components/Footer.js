@@ -5,7 +5,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer bg-black text-light py-4" style={{width : "100%"}}>
+    <footer className="footer bg-black text-light py-4" style={{width : "100%", borderTop:"1px solid gray"}}>
       <Container className='foot_container'>
                 <Col md={4} className="text-center text-md-left mb-3 mb-md-0">
                     <h5 className="mb-3">Follow Us !!</h5>

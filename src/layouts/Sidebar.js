@@ -43,17 +43,15 @@ const Sidebar = () => {
   let location = useLocation();
 
   return (
-    <div>
-      <div className="d-flex align-items-center"></div>
-      
-      <div className="sidebar p-3 mt-2" style={{ backgroundColor: '#343a40', color: 'white' }}>
+    <div style={{ borderRight : "1px solid gray"  ,height:"100vh" }}>
+      <div className=" p-3" style={{ backgroundColor: 'black', color: 'white',}}>
         <Nav vertical className="sidebarNav">
           <h1 style={{fontWeight : "inherit"}}>Games</h1>
           {navigation.map((navi, index) => (
             <NavItem key={index} className=" nav-item-custom">
               <Link
                 to={navi.href}
-                className={
+                className={ 
                   location.pathname === navi.href
                     ? "active nav-link py-3 text-purple"
                     : "nav-link py-3 text-white"

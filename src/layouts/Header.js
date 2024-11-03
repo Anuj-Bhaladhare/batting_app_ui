@@ -11,7 +11,6 @@ import {
 } from "reactstrap";
 import { ReactComponent as LogoWhite } from "../assets/images/logos/materialprowhite.svg";
 import "./Header.css"; 
-import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -31,7 +30,7 @@ const Header = () => {
 
   return (
     <>
-    <Navbar color="dark" dark expand="md" className="custom-navbar">
+    <Navbar  dark expand="md" className="custom-navbar" >
       <NavbarBrand href="/" className="logo-section d-flex align-items-center">
         <LogoWhite className="navbar-logo" />
         <span className="company-name">Company</span>
@@ -71,8 +70,6 @@ const Header = () => {
           </div>
         </div>
       </Collapse>
-
-
 
     </Navbar>
 

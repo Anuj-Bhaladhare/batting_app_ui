@@ -46,7 +46,7 @@ const Alerts = () => {
 
   return (
     <div className="cricket-matches">
-      <h2>Cricket Matches</h2>
+      <h2>Horse Racing Matches</h2>
       <div className="tabs">
         <button>All Games</button>
         <button>Live Matches</button>

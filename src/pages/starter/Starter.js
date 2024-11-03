@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import '../../style_sheet/CricketMatches.css';
 import useStarterHook from './hook';
 import '../../style_sheet/starter.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import details from '../Details/details';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import details from '../Details/details';
 
 const Alerts = () => {
   const [{ getHomePageDetail, getInplayDetails, getMarketDetailsByMarketID }] = useStarterHook();
@@ -75,9 +75,7 @@ const Alerts = () => {
         <tbody>
           {matches.length > 0 ? (
             matches.map((match, index) => (
-              <tr key={index} onClick={handleDetails(()=> {
-                  navigate(`/details` ); 
-              })}>
+              <tr key={index} >
                 <td>
                   {new Date(match.marketStartTime).toLocaleTimeString()} {match.status === 'OPEN' && <span className="live-tag">LIVE</span>}
                 </td>
