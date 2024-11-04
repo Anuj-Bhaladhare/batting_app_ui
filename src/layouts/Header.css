@@ -1,7 +1,8 @@
 /* Header.css */
 
 .custom-navbar {
-    background-color: #000; /* Set navbar background to black */
+    background-color: black; 
+    border-bottom: 1px solid gray !important;
 }
 
 .logo-section {

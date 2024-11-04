@@ -21,18 +21,17 @@ const FullLayout = () => {
           <Route path="/signup" element={<SignupForm />} />
         </Routes>
      </BrowserRouter> */}
-      <div className="pageWrapper d-lg-flex" style={{background:"#111216",  boxSizing:"border-box"}}>
+      <div className="pageWrapper d-lg-flex" style={{background:"black",  boxSizing:"border-box", marginRight: " 1px solid gray"}}>
         {/********Sidebar**********/}
-        <aside className="sidebarArea shadow" id="sidebarArea" style={{background:"#343a40", marginTop:"20px"}}>
+        <aside className="sidebarArea shadow" id="sidebarArea" style={{background:"black" ,padding:"0px", margin : "0px"}}>
           <Sidebar />
         </aside>
         <div className="contentArea" style={{background:"black"}}>
-          <Container className="p-4" fluid > 
-            <Outlet   />
+          <Container className="p-4"   > 
+            <Outlet   style={{background:"black"}} />
           </Container>
         </div>
         <Betslip/>
-
 
       </div>
       <Footer/>

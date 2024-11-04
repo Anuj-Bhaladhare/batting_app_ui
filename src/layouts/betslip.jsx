@@ -6,7 +6,7 @@ const Betslip = () => {
   const [activeKey, setActiveKey] = useState('betslip');
 
   return (
-    <Container className="betslip-container text-center p-3" style={{background:"black"}}>
+    <Container className="betslip-container text-center p-3" style={{background:"black", borderLeft:"1px solid gray"}}>
       <h4>Betslip</h4>
       <Tabs
         id="betslip-tabs"
