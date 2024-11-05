@@ -66,28 +66,50 @@ const Alerts = () => {
         <tbody>
           {matches.length > 0 ? (
             matches.map((match, index) => (
-              <tr key={index}>
-                <td>
+              <tr key={index} style={{borderBottom: "1px solid gray"}}>
+                <td style={{borderBottom: "1px solid gray"}}>
                   {new Date(match.marketStartTime).toLocaleTimeString()} {match.status === 'OPEN' && <span className="live-tag">LIVE</span>}
                 </td>
-                <td>
+                <td style={{borderBottom: "1px solid gray"}}>
                   <span className="team">{match.marketName }</span>
                 </td>
-                <td>
-                  {match.runners[0]?.ex?.availableToBack[0]?.price || '-'}
+                <td className='tables-rowss'>
+                  <span style={{paddingRight : "20px",marginRight:"5px"}}>
+                    {match.runners[0]?.ex?.availableToBack[0]?.price || '-'}
+                  </span>
+                  {match.runners[0]?.ex?.availableToBack[1]?.price || '-'}
                   <br/>
-                  {match.runners[0]?.ex?.availableToBack[0]?.size || '-'}
+                  <span style={{paddingRight : "20px"}}>
+                    {match.runners[0]?.ex?.availableToBack[0]?.size || '-'}
+                  </span>
+                  {match.runners[0]?.ex?.availableToBack[1]?.size || '-'}
+
                 </td>
-                <td>
-                  {match.runners[1]?.ex?.availableToBack[0]?.price || '-'}
+                <td className='tables-rowss'>
+                  <span style={{paddingRight : "20px",marginRight:"5px"}}>
+                    {match.runners[0]?.ex?.availableToBack[2]?.price || '-'}
+                  </span>
+                  {match.runners[0]?.ex?.availableToLay[0]?.price || '-'}
                   <br/>
-                  {match.runners[1]?.ex?.availableToBack[0]?.size || '-'}
+                  <span style={{paddingRight : "20px"}}>
+                    {match.runners[0]?.ex?.availableToBack[2]?.size || '-'}
+                  </span>
+                  {match.runners[0]?.ex?.availableToLay[0]?.size || '-'}
+
                 </td>
-                <td>
-                  {match.runners[2]?.ex?.availableToBack[0]?.price || '-'}
+                <td className='tables-rowss'>
+                  <span style={{paddingRight : "20px",marginRight:"5px"}}>
+                    {match.runners[0]?.ex?.availableToLay[1]?.price || '-'}
+                  </span>
+                  {match.runners[0]?.ex?.availableToLay[2]?.price || '-'}
                   <br/>
-                  {match.runners[2]?.ex?.availableToBack[0]?.size || '-'}
+                  <span style={{paddingRight : "20px"}}>
+                    {match.runners[0]?.ex?.availableToLay[1]?.size || '-'}
+                  </span>
+                  {match.runners[0]?.ex?.availableToLay[2]?.size || '-'}
+
                 </td>
+
 
               </tr>
             ))

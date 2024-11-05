@@ -21,20 +21,22 @@
 }
 
 .search-bar {
-    flex: 1; /* Makes the search bar take up available space */
+    flex: 1; 
     max-width: 400px;
     margin-left: 20%;
+    
 }
 
 .search-input {
-    background-color: #333; /* Gray background */
+    background-image: linear-gradient(to right, #4c4c4d ,#333);
+
     color: white; /* Text color */
     border: none;
 }
 
 .search-input::placeholder {
     color: lightgray; /* Light gray placeholder */
-}
+} 
 
 .search-icon {
     background-color: #333; /* Matches the search input color */
@@ -48,30 +50,20 @@
 }
 
 .signup-button {
-    background-color: purple;
+    background-image: linear-gradient(to right, #a100ff , rgb(87, 3, 196));
     border: none;
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s; 
 }
 
-.login-button {
-    border: 1px solid purple;
-    color: purple;
-    background-color: transparent; /* Initial background transparent */
-    transition: background-color 0.3s; /* Smooth transition */
-}
 
 /* Change background color on hover */
 .signup-button:hover {
-    background-color: transparent;
-    border: 2px solid purple;
+    background-image: none;
+    background-color: transparent  !important;
+    cursor: pointer;
+    border : 1px solid white;
 }
 
-.login-button:hover {
-    background-color: transparent; /* Set background color to black on hover */
-    color: white; /* Change text color to white for better contrast */
-    border: 2px solid purple;
-
-}
 
 .profile-logo {
     width: 40px; /* Adjust size as needed */

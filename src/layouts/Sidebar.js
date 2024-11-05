@@ -46,7 +46,7 @@ const Sidebar = () => {
     <div style={{ borderRight : "1px solid gray"  ,height:"100vh" }}>
       <div className=" p-3" style={{ backgroundColor: 'black', color: 'white',}}>
         <Nav vertical className="sidebarNav">
-          <h1 style={{fontWeight : "inherit"}}>Games</h1>
+          <h1 style={{fontWeight : "inherit", fontSize:"25px"}}>Games</h1>
           {navigation.map((navi, index) => (
             <NavItem key={index} className=" nav-item-custom">
               <Link
