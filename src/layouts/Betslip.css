@@ -23,8 +23,9 @@
   }
   
   .edit-stakes-button {
-    background-color: #a100ff;
+    background-image: linear-gradient(to right, #a100ff , rgb(63, 7, 138));
     border: none;
+    border-radius: none;
   }
   
   .edit-stakes-button:hover {

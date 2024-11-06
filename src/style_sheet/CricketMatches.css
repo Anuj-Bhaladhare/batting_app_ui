@@ -2,14 +2,10 @@
     color: white;
     font-family: Arial, sans-serif;
     background-color: black; /* Updated background color */
-    /* padding: 20px; */
     border-radius: 5px;
     width: 100%;
-    max-width: 800px;
-    /* max-height: 100vh; */
     margin: auto;
     border : 1px solid gray;
-    /* overflow-y: scroll; */
   }
   
   /* Other CSS remains the same */
@@ -88,6 +84,12 @@
 
 .matches-table td {
   background-color: black !important;
-  border-bottom:1px solid gray !important;
 
+}
+
+.tables-rowss{
+  background-color: red !important;
+  padding: 0 !important;
+  border: 0 !important;
+  font-size: 15px;
 }
